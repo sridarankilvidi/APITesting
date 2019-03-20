@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="classes">
+  <test thread-count="4" name="APIParallelTests(failed)" parallel="classes">
+    <classes>
+      <class name="RestApi.APITest.GetTest">
+        <methods>
+          <include name="GetWeatherDetailsInvalidCity"/>
+          <include name="DisplayAllNodesInWeatherAPI"/>
+        </methods>
+      </class> <!-- RestApi.APITest.GetTest -->
+      <class name="RestApi.APITest.Authentication">
+        <methods>
+          <include name="AuthenticationBasics"/>
+        </methods>
+      </class> <!-- RestApi.APITest.Authentication -->
+      <class name="RestApi.APITest.PostTest">
+        <methods>
+          <include name="SimplePostTest"/>
+        </methods>
+      </class> <!-- RestApi.APITest.PostTest -->
+    </classes>
+  </test> <!-- APIParallelTests(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
